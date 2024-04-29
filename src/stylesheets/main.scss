@@ -1,1 +1,102 @@
-// Your styles go here
+html{
+    font-size: 16px;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    box-sizing: border-box;
+}
+
+*{
+    box-sizing: inherit;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .upper {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between; /* Spread items horizontally */
+    width: 50%; /* Adjust width as needed */
+  }
+  
+
+nav ul, aside ul{ 
+    list-style: none;
+    padding: 0;
+}
+
+nav ul > li{
+    display: inline-block;
+}
+
+nav, footer{
+    background: #d5c2c5;
+}
+
+aside{
+    background: teal;
+}
+
+header{
+    font-size: 3rem;
+}
+
+/* Flexbox */
+body{
+    background: #eff0f2;
+    display: flex;
+    flex-direction: column;
+    height: 100vw;
+}
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+}
+
+footer{
+    display: flex;
+    flex-direction: column;
+}
+
+/* Large Screens*/
+@media all and (min-width:600px){
+    main{
+        flex-direction: row;
+    }
+
+    aside{
+        flex: 0 1 150px;
+        order: -1;
+    }
+
+    article{
+        flex: 1 1 0;
+    }
+
+    footer{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    footer a:last-of-type{
+        flex-grow: 1;
+    }
+
+    footer a{
+        padding-right: 10px;
+    }
+
+    nav{
+        flex-direction: row;
+    }
+}
